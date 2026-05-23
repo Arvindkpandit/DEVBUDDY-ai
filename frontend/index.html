@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dev Buddy — AI App Generator</title>
+
+    <meta
+        name="description"
+        content="Describe the app you want and Dev Buddy's AI agents will plan, architect, and code it for you."
+    >
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet"
+          href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- LOGIN OVERLAY -->
+    <!-- ========================================= -->
+
+    <div id="loginOverlay" class="login-overlay">
+
+        <div class="login-popup">
+
+            <h1>⚡ Dev Buddy</h1>
+
+            <p>
+                Login to continue using Dev Buddy
+            </p>
+
+            <button id="loginBtn">
+                Login with Google
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- MAIN WEBSITE -->
+    <!-- ========================================= -->
+
+    <div id="mainWebsite" style="display:none;">
+
+        <div class="container">
+
+            <!-- LEFT PANEL -->
+
+            <div class="main-content">
+
+                <h1>⚡ Dev Buddy</h1>
+
+                <p class="subtitle">
+                    Describe the app you want to build and AI agents will
+                    plan, architect, and code it for you.
+                </p>
+
+                <p style="color:red;">
+
+                    Note: Ollama works only on local machine.
+
+                    <br>
+
+                    Make sure you have Ollama running.
+
+                    <br>
+
+                    Best result:
+                    Groq provider + openai/gpt-oss-120b
+
+                </p>
+
+                <!-- PROVIDER + MODEL -->
+
+                <div class="model-selector-row">
+
+                    <div class="selector-group">
+
+                        <label for="providerSelect">
+                            Provider
+                        </label>
+
+                        <select id="providerSelect">
+
+                            <option value="groq">
+                                Groq
+                            </option>
+
+                            <option value="gemini">
+                                Gemini
+                            </option>
+
+                            <option value="ollama">
+                                Ollama
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="selector-group">
+
+                        <label for="modelSelect">
+                            Model
+                        </label>
+
+                        <select id="modelSelect">
+
+                            <option value="">
+                                Loading…
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div id="modelStatus"
+                     class="model-status">
+                </div>
+
+                <!-- INPUT -->
+
+                <textarea
+                    id="requirements"
+                    placeholder="Describe your app..."
+                    maxlength="2000"
+                ></textarea>
+
+                <p id="charCount"
+                   class="char-count">
+                    0 / 2000
+                </p>
+
+                <!-- GENERATE -->
+
+                <button id="submitBtn">
+                    Generate App
+                </button>
+
+                <!-- CONSOLE -->
+
+                <div class="console"
+                     id="console">
+
+                    <div class="console-header">
+
+                        <span>
+                            Console
+                        </span>
+
+                        <span id="statusBadge"
+                              class="status-badge">
+                        </span>
+
+                    </div>
+
+                    <div class="console-output"
+                         id="consoleOutput">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT PANEL -->
+
+            <div class="preview-container">
+
+                <div class="preview-header">
+
+                    <span>
+                        Preview
+                    </span>
+
+                    <div class="preview-actions">
+
+                        <button
+                            id="refreshBtn"
+                            class="preview-btn"
+                            disabled
+                        >
+                            ↺ Refresh
+                        </button>
+
+                        <button
+                            id="downloadBtn"
+                            class="preview-btn download-btn"
+                            disabled
+                        >
+                            ⬇ Download
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <iframe
+                    id="preview"
+                    src="about:blank"
+                    title="Generated app preview"
+                ></iframe>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- AI CHAT -->
+        <!-- ========================================= -->
+
+        <div class="chat-container minimized"
+             id="chatContainer">
+
+            <div class="chat-header">
+
+                <h2>
+                    AI Assistant
+                </h2>
+
+                <button id="toggleChatBtn">
+                    +
+                </button>
+
+            </div>
+
+            <div id="chatMessages"></div>
+
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Ask AI anything..."
+                />
+
+                <button id="sendChatBtn">
+                    Send
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SCRIPTS -->
+
+    <script type="module"
+            src="firebase-auth.js">
+    </script>
+
+    <script type="module"
+            src="script.js">
+    </script>
+
+</body>
+
+</html>
