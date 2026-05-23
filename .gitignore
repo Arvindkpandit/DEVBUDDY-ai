@@ -24,6 +24,6 @@ __pycache__/
 .vscode/
 .idea/
 
-
-.env
 firebase-key.json
+.env
+generated_project/
