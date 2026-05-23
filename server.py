@@ -30,7 +30,12 @@ GENERATED_BASE.mkdir(parents=True, exist_ok=True)
 app = FastAPI()
 
 # 🔐 Firebase Initialization
-cred = credentials.Certificate("firebase-key.json")
+import json
+
+firebase_json = json.loads(os.getenv("FIREBASE_CREDENTIALS"))
+
+cred = credentials.Certificate(firebase_json)
+
 firebase_admin.initialize_app(cred)
 
 # 🤖 Gemini API Initialization

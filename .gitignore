@@ -23,3 +23,7 @@ __pycache__/
 # IDE
 .vscode/
 .idea/
+
+
+.env
+firebase-key.json
