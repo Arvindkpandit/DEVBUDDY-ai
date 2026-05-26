@@ -723,3 +723,27 @@ iframe {
     transform: translateY(-2px);
 }
 
+.logout-btn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    padding: 10px 18px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ef4444;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    z-index: 99999;
+}
+
+.logout-btn:hover{
+    opacity: 0.9;
+}

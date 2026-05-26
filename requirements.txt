@@ -4,3 +4,12 @@ firebase-admin
 google-generativeai
 python-dotenv
 langgraph
+
+langchain
+langchain-core
+
+langchain-google-genai
+langchain-groq
+langchain-ollama
+
+requests

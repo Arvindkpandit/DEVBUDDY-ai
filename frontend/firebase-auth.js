@@ -114,3 +114,19 @@ function showLogin() {
         mainWebsite.style.display = "none";
     }
 }
+
+// Logout Button
+
+const logoutBtn = document.getElementById("logoutBtn");
+
+if (logoutBtn) {
+
+    logoutBtn.addEventListener("click", () => {
+
+        localStorage.removeItem("token");
+
+        location.reload();
+
+    });
+
+}
