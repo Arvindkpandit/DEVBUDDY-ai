@@ -104,7 +104,7 @@ OLLAMA_BASE_URL=http://localhost:11434
 python server.py
 ```
 
-Open **http://localhost:8000** in your browser.
+Open **https://devbuddy-ai.onrender.com** in your browser.
 
 ---
 
