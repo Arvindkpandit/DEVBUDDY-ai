@@ -59,7 +59,7 @@ Each generated app is saved to its own uniquely-named subfolder under `generated
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/SamarthKuchya/dev-buddy.git
+git clone https://github.com/Arvindkpandit/DEVBUDDY-ai.git
 cd dev-buddy
 ```
 
@@ -204,4 +204,4 @@ app-builder/
 
 ## Author
 
-Samarth Kumar Kuchya — [LinkedIn](https://www.linkedin.com/in/samarth-kuchya/) | [GitHub](https://github.com/SamarthKuchya)
+Arvind Pandit — [LinkedIn](www.linkedin.com/in/arvind-pandit-08b5aa2a4) | [GitHub](https://github.com/Arvindkpandit)
